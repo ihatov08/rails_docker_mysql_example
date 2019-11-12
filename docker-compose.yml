@@ -7,6 +7,7 @@ services:
     env_file: .env
     volumes:
       - .:/app
+      - bundle:/usr/local/bundle
     environment:
       DB_USER: root
       DB_PASS: password
@@ -30,3 +31,6 @@ services:
     ports:
       - 1080:1080
       - 1025:1025
+
+volumes:
+  bundle:
